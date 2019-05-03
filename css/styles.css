@@ -267,7 +267,7 @@ figure {
   }
 
   .movie:not(:first-child) .movie-poster {
-    display: inline;
+    display: block;
   }
 
   main {
@@ -277,5 +277,11 @@ figure {
 
   .movie:first-child {
     grid-column: 1 / 4;
+  }
+}
+
+@media screen and (min-width: 1355px) {
+  .movie-backdrop {
+    width: 100%;
   }
 }
