@@ -249,7 +249,33 @@ figure {
     display: block;
     margin: 0;
   }
+
   .about > p {
     margin: 1em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  /* removing descriptions on all but first */
+  .movie:not(:first-child) .movie-overview {
+    display: none;
+  }
+
+  .movie:not(:first-child) .movie-backdrop {
+    display: none;
+  }
+
+  .movie:not(:first-child) .movie-poster {
+    display: inline;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .movie:first-child {
+    grid-column: 1 / 4;
   }
 }
